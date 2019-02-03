@@ -22,7 +22,6 @@ public final class Generator {
 
   private Generator( int randomBase, int length ) {
     StringBuilder pass = new StringBuilder();
-	System.out.println( randomBase );
 	for ( int i = 0; i < length; i++ ) {
 		int intCar = ( int ) Math.floor( ( ( ( randomBase + Math.pow( randomBase, i ) ) % 74 ) + 48 ) % 74 + 48);
 		if ( intCar == 96 )
@@ -33,7 +32,6 @@ public final class Generator {
 		  intCar += 48;
 		char car = (char) intCar ;
 		pass.append( car );
-		System.out.println( car + " | " + intCar );
 	}
 	this.pass = pass.toString();
   }
