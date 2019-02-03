@@ -1,6 +1,7 @@
 package app;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class Main {
   private static final String LENGTH_SHORT = "-l";
@@ -24,7 +25,10 @@ public class Main {
 	  }
   }
   public static void main( String... a ){
-	help();
-	System.out.print( "hellos" );
+		if( a.length == 0 ){
+			help();
+			return;
+		}
+		ArrayList<String> args = Arrays.asList( a );
   }
 }
